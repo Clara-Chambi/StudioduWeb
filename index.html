@@ -226,6 +226,69 @@
     .service-row { grid-template-columns: 1fr; gap: 8px; }
   }
 
+  /* ABOUT */
+  section.about {
+    position: relative;
+    z-index: 2;
+    padding: 72px 0;
+    border-top: 1px solid var(--panel-line);
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 44px;
+    align-items: start;
+  }
+
+  @media (max-width: 640px) {
+    section.about { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    background: linear-gradient(155deg, var(--violet-deep), var(--panel) 70%);
+    border: 1px solid var(--panel-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-photo-placeholder {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0 16px;
+  }
+
+  .about-kicker {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--rose);
+    margin-bottom: 14px;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    max-width: 24ch;
+  }
+
+  .about-text p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    max-width: 62ch;
+    margin-bottom: 16px;
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+
   /* WHY */
   section.why {
     position: relative;
@@ -345,7 +408,7 @@
     <h1>Un site qui travaille pour vous, <em>pas l'inverse</em>.</h1>
     <p class="lead">Je conçois des sites rapides et sur mesure pour les artisans et commerces qui veulent être trouvés en ligne — sans abonnement mensuel à justifier, sans usine à gaz à gérer.</p>
     <div class="cta-row">
-      <a class="btn-primary" href="mailto:clara83chambi@gmail.com">Prendre Contact</a>
+      <a class="btn-primary" href="mailto:clara83chambi@gmail.com">Prendre contact</a>
       <a class="btn-secondary" href="#services">Voir les services</a>
     </div>
   </section>
@@ -379,6 +442,19 @@
     <div class="service-row">
       <h3><span class="tag">Visibilité</span>Réseaux sociaux</h3>
       <p>Mise en place et suivi de vos comptes pro, pour construire une présence régulière sans que ça devienne une charge pour vous.</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-photo">
+      <!-- Remplacez ce bloc par : <img src="clara.jpg" alt="Clara, fondatrice du Studio du Web de Clara"> -->
+      <span class="about-photo-placeholder">Photo à ajouter</span>
+    </div>
+    <div class="about-text">
+      <span class="about-kicker">À propos</span>
+      <h2>Une expérience terrain, au service de votre visibilité</h2>
+      <p>Avant de lancer Le Studio du Web de Clara, j'ai travaillé plusieurs années dans une grande compagnie d'assurance de la région ainsi qu'en agence marketing. J'y ai piloté des campagnes Google Ads, mené des tests A/B et travaillé l'optimisation du taux de conversion (CRO) sur des sites à fort trafic — en plus de la rédaction web, de l'emailing, de la gestion de bases de données clients et de la relation client au quotidien.</p>
+      <p>Aujourd'hui, je mets cette expérience au service des artisans et commerces locaux : des sites qui ne se contentent pas d'être beaux, mais qui sont pensés, dès leur conception, pour transformer vos visiteurs en clients.</p>
     </div>
   </section>
 
